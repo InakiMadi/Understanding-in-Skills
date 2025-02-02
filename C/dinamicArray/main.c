@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "src/dinamicArray.c"
-// ^ .c makes gdb work. .h makes make work
-
-
+#include "src/dinamicArray.h"
 
 
 //int main(int argc, char* argv[])
@@ -27,8 +24,7 @@ int main()
 
     int total_number_of_shelves;
     scanf("%d", &total_number_of_shelves);
-    
-    // Number of queries
+ 
     int total_number_of_queries;
     scanf("%d", &total_number_of_queries);
     
