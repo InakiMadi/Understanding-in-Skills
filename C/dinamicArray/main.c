@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "src/dinamicArray.h"
+#include "include/query.h"
+#include "include/queryCollection.h"
 
 
 //int main(int argc, char* argv[])

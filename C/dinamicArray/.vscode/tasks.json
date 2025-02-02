@@ -10,7 +10,8 @@
                 "-Wextra",             // Enable extra warnings
                 "-g",                  // Include debugging information
                 "main.c",              // Main source file
-                "src/dinamicArray.c",  // Additional source file
+                "src/query.c",  // Additional source file
+                "src/queryCollection.c",
                 "-o",                  // Output file
                 "${workspaceFolder}/output/program.exe" // Output executable name
             ],
