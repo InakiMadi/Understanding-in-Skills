@@ -5,7 +5,7 @@
             "name": "Debug C Program",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/program", // Path to the executable
+            "program": "${workspaceFolder}/output/program.exe", // Path to the executable
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -20,7 +20,7 @@
                 }
             ],
             "preLaunchTask": "build", // Run the build task before debugging
-            "miDebuggerPath": "/usr/bin/gdb", // Path to gdb (Linux/WSL)
+            "miDebuggerPath": "gdb",  // Path to gdb (use "gdb" if it's in your PATH)
             "logging": {
                 "trace": true,
                 "traceResponse": true,
