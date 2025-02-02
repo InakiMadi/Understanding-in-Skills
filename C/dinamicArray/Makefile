@@ -4,10 +4,10 @@ CFLAGS = -Wall -Wextra -g
 OUTPUT_DIR = output
 ifeq ($(OS),Windows_NT)
 	RM = del /f
-	TARGET = .\output\main.exe
+	TARGET = .\output\program.exe
 else
 	RM = rm -f
-	TARGET = ./output/main
+	TARGET = ./output/program
 endif
 SRC_DIR = src
 TEST_DIR = tests
@@ -17,7 +17,10 @@ TEST_SRC = $(TEST_DIR)/test.c
 all: $(TARGET)
 
 $(TARGET): $(SRC)
-	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
+
+debug: $(SRC)
+	$(CC) $(CFLAGS) -g $(SRC) -o $(TARGET)
 
 clean:
 	$(RM) $(TARGET)
