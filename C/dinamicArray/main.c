@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "src/dinamicArray.h"
-
+#include "src/dinamicArray.c"
+// ^ .c makes gdb work. .h makes make work
 
 
 
@@ -29,11 +29,15 @@ int main()
     scanf("%d", &total_number_of_shelves);
     
     // Number of queries
-    
     int total_number_of_queries;
     scanf("%d", &total_number_of_queries);
     
+    // Initialize arrays
     int** total_number_of_pages = (int**)malloc(total_number_of_shelves * sizeof(int*));
+    for (int i = 0; i < total_number_of_shelves; i++) {
+        total_number_of_pages[i] = NULL;
+    }
+
     int* total_number_of_books = (int*)calloc(total_number_of_shelves,sizeof(int));
 
     while (total_number_of_queries > 0) {

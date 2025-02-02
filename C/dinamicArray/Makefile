@@ -4,10 +4,10 @@ CFLAGS = -Wall -Wextra -g
 OUTPUT_DIR = output
 ifeq ($(OS),Windows_NT)
 	RM = del /f
-	TARGET = program.exe
+	TARGET = .\output\main.exe
 else
 	RM = rm -f
-	TARGET = program
+	TARGET = ./output/main
 endif
 SRC_DIR = src
 TEST_DIR = tests
