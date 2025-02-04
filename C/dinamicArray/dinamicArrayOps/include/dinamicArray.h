@@ -1,0 +1,1 @@
+void initializeArrayOfArrays(int **array_of_arrays, int array_length);

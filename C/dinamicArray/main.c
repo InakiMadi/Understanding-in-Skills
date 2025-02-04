@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "dinamicArrayOps/include/dinamicArray.h"
 #include "include/query.h"
 #include "include/queryCollection.h"
 
@@ -31,9 +32,7 @@ int main()
     
     // Initialize arrays
     int** total_number_of_pages = (int**)malloc(total_number_of_shelves * sizeof(int*));
-    for (int i = 0; i < total_number_of_shelves; i++) {
-        total_number_of_pages[i] = NULL;
-    }
+    initializeArrayOfArrays(total_number_of_pages, total_number_of_shelves);
 
     int* total_number_of_books = (int*)calloc(total_number_of_shelves,sizeof(int));
 
