@@ -12,6 +12,7 @@
                 "main.c",              // Main source file
                 "src/query.c",  // Additional source file
                 "src/queryCollection.c",
+                "dinamicArrayOps/src/dinamicArrayOps.c",
                 "-o",                  // Output file
                 "${workspaceFolder}/output/program.exe" // Output executable name
             ],
