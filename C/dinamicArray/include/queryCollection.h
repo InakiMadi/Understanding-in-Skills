@@ -9,7 +9,7 @@ struct QueryCollection {
 
 void initializeQueryCollection(struct QueryCollection* query_col);
 
-void addQuery(struct QueryCollection* query_col, const struct Query query);
+void addQuery(struct QueryCollection* query_col, const struct Query* query);
 
 void displayQueryCollection(const struct QueryCollection* query_collection);
 
