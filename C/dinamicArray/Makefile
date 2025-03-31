@@ -11,8 +11,8 @@ else
 endif
 SRC_DIR = src
 TEST_DIR = tests
-SRC = main.c $(SRC_DIR)/dinamicArray.c
-TEST_SRC = $(TEST_DIR)/test.c
+SRC = main.c $(SRC_DIR)/query.c $(SRC_DIR)/queryCollection.c dinamicArrayOps/$(SRC_DIR)/dinamicArray.c
+TEST_SRC = $(TEST_DIR)\test.c
 
 all: $(TARGET)
 
