@@ -31,14 +31,16 @@ int main()
     scanf("%d", &total_number_of_queries);
     
     // Initialize arrays
+    // malloc for creating dinamic memory without initializing
     int** total_number_of_pages = (int**)malloc(total_number_of_shelves * sizeof(int*));
     initializeArrayOfArrays(total_number_of_pages, total_number_of_shelves);
 
+    // calloc for creating dinamic memory and initializing to 0
     int* total_number_of_books = (int*)calloc(total_number_of_shelves,sizeof(int));
 
     while (total_number_of_queries > 0) {
         addRequest(&query);
-        addQuery(&query_collection,query);
+        addQuery(&query_collection,&query);
         total_number_of_queries--;
     }
     

@@ -6,8 +6,6 @@ struct ArrayOfInt{
     int length;
 };
 
-void initializeArrayOfArrays(int **array_of_arrays, int array_length);
-
 void initializeArrayOfInt(struct ArrayOfInt* array);
 
 void displayArray(const struct ArrayOfInt* array);
