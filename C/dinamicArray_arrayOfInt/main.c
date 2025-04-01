@@ -1,9 +1,7 @@
 #include "include/dinamicArray.h"
 
 int main(){
-    struct ArrayOfInt example;
-
-    initializeArrayOfInt(&example);
+    ArrayOfInt example = createArrayOfInt();
 
     addElementToArray(&example,10);
     addElementToArray(&example,11);

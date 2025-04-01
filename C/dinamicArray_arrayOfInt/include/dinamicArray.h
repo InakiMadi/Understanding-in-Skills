@@ -1,15 +1,15 @@
 #ifndef DINAMICARRAY_H
 #define DINAMICARRAY_H
 
-struct ArrayOfInt{
+typedef struct{
     int* list;
     int length;
-};
+} ArrayOfInt;
 
-void initializeArrayOfInt(struct ArrayOfInt* array);
+ArrayOfInt createArrayOfInt();
 
-void displayArray(const struct ArrayOfInt* array);
+void displayArray(const ArrayOfInt* array);
 
-void addElementToArray(struct ArrayOfInt* array, int element);
+void addElementToArray(ArrayOfInt* array, int element);
 
 #endif
