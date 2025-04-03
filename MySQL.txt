@@ -33,3 +33,13 @@ FROM table
 WHERE LENGTH(column) = (SELECT MAX(LENGTH(column)) FROM table) 
 ORDER BY column ASC
 LIMIT 1);
+
+"find all users who have made more than 5 orders."
+SELECT users.id AS id, 
+       users.name AS name, 
+       users.dni AS dni
+ FROM users 
+ INNER JOIN orders 
+  ON users.id = orders.user_id 
+ GROUP BY users.id, users.name, users.dni 
+ HAVING count(*) > 5;
